@@ -30,8 +30,9 @@ body {
 }
 
 .login {
-    width: 50%;
-    padding: 70px 30px 40px;
+    min-width: 30%;
+    height: auto;
+    padding: 30px;
     border-radius: var(--radius);
     background: white;
     text-align: center;
@@ -74,12 +75,12 @@ body {
 .login-form > input {
     width: 240px;
     background: transparent;
-    border: 2px solid transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-    font-size: 18px;
+    font-size: 17px;
     padding: 0;
     text-align: center;
-    transition: all 0.3s;
+    border: 2px solid transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    transition: all 0.2s;
 }
 
 .login-form > input:hover {
@@ -97,9 +98,9 @@ body {
     background: var(--primary-color);
     color: var(--secondary-color);
     border: 0;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 500px;
     letter-spacing: 2px;
     transition: all 0.3s;
 }
@@ -114,4 +115,16 @@ body {
     font-size: 1rem;
     text-align: left;
     transition: all 0.3s;
+}
+
+@media (min-width: 576px) {
+    .login {
+        min-width: 50%;       
+    }
+}
+
+@media (min-width: 992px) {
+    .login {
+        min-width: 25%;     
+    }
 }
