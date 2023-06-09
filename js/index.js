@@ -1,17 +1,27 @@
 function auth() {
     let loginForm = document.getElementById("loginForm");
-    let data = new FormData(loginForm);
     fetch("php/auth.php", {
         method: "POST",
-        body: data
+        redirect: "manual",
+        body: new FormData(loginForm)
     })
-    .then((response) => response.text())
-    .then((text) => { console.log(text); })
+    .then((response) => response.json())
+    .then((json) => {
+        if (json.message === "SUCCESS") {
+            alert("Login realizado com sucesso.");
+            window.location.href = json.url;
+        } else {
+            alert("Login falhou! Usuário e/ou Senha Incorretos.");
+        }
+    })
 }
 
 function main() {
     let loginButton = document.getElementById("loginButton");
-    loginButton.addEventListener("click", auth)
+    loginButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        auth();
+    })
 }
 
 window.onload = () => {
