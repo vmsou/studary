@@ -4,11 +4,9 @@ function auth() {
     fetch("php/auth.php", {
         method: "POST",
         body: data
-    }).then((response) => {
-        console.log(response);
-    }).catch(() => {
-        console.log("Não foi possivel autenticar login.")
-    });
+    })
+    .then((response) => response.text())
+    .then((text) => { console.log(text); })
 }
 
 function main() {
