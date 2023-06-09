@@ -14,10 +14,12 @@
             session_regenerate_id();
             $row = mysqli_fetch_array($result);
             $_SESSION["username"] = $row["username"];
-            echo "Sucesso";
+            $data["message"] = "SUCCESS";
+            $data["url"] = "../pages/dashboard.html";
         } else {
-            echo "Falhou";
+            $data["message"] = "FAILED";
         }
+        $JSON_OBJ = json_encode($data);
+        echo $JSON_OBJ;
     }
-    
 ?>
