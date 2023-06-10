@@ -6,12 +6,12 @@ function auth() {
         body: new FormData(loginForm)
     })
     .then((response) => response.json())
-    .then((json) => {
-        if (json.message === "SUCCESS") {
-            alert("Login realizado com sucesso.");
-            window.location.href = json.url;
-        } else {
+    .then((data) => {
+        if (data.error) {
             alert("Login falhou! Usuário e/ou Senha Incorretos.");
+        } else {
+            alert("Login realizado com sucesso.");
+            window.location.href = data.url;
         }
     })
 }
