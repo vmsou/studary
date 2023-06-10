@@ -1,4 +1,6 @@
-![image](img/full-logo.png)  
+<p align="center">
+  <img src="img/full-logo.png" />
+</p>
 
 ## Sobre
 Projeto realizado para a disciplina de Inovação Colaborativa
