@@ -11,6 +11,7 @@ function signUp() {
             alert("Login falhou! Usuário e/ou Senha Incorretos.");
         } else {
             alert("Login realizado com sucesso.");
+            sessionStorage.setItem("username", data["username"]);
             window.location.href = data.url;
         }
     })

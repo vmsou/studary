@@ -1,6 +1,6 @@
 function signUp() {
     let signupForm = document.getElementById("signupForm");
-    fetch("php/signup.php", {
+    fetch("../php/signup.php", {
         method: "POST",
         redirect: "manual",
         body: new FormData(signupForm)
@@ -9,8 +9,10 @@ function signUp() {
     .then((data) => {
         if (data.error) {
             alert("Cadastro falhou. Tente Novamente!");
+            location.reload();
         } else {
             alert("Cadastro realizado com sucesso.");
+            sessionStorage.setItem("username", data["username"]);
             window.location.href = data.url;
         }
     })
