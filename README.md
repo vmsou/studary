@@ -1,4 +1,6 @@
-# Studary
+![image](img/full-logo.png)  
+
+## Sobre
 Projeto realizado para a disciplina de Inovação Colaborativa
 
 ## Ferramentas
