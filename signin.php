@@ -15,7 +15,6 @@
 </head>
 <body>
     <?php
-        ob_start();
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
             $username = stripslashes($_POST["username"]);
             $username = mysqli_real_escape_string($db, $username);
@@ -30,7 +29,9 @@
             if ($count == 1) {
                 $row = mysqli_fetch_array($result);
                 $_SESSION["username"] = $row["username"];
-                header("Location: index.php");
+                echo "<script>
+                    window.location.href = 'index.php';
+                </script>";
             } else {
                 echo "<script>
                     alertModal('error', 'Usuário e/ou senha incorreto(s). Tente Novamente.');
@@ -38,7 +39,7 @@
                 </script>";
             }
         }
-        ob_end_flush();
+        exit();
     ?>
     <div class="login center-self">
         <img src="img/logo.png" alt="">
