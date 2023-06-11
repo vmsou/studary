@@ -51,7 +51,6 @@
                         alertModal('error', 'Não foi possível cadastrar. Tente Novamente.');
                         document.currentScript.remove();
                     </script>";
-                    exit();
                 }
             }
         }

@@ -35,10 +35,9 @@
                 exit();
             } else {
                 echo "<script>
-                    alertModal('error', 'Usuário e/ou senha incorreto(s). Tente Novamente.');
+                    alertModal('success', 'Usuário e/ou senha incorreto(s). Tente Novamente.');
                     document.currentScript.remove();
                 </script>";
-                exit();
             }
         }
     ?>
