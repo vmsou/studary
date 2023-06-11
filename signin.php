@@ -32,14 +32,15 @@
                 echo "<script>
                     window.location.href = 'index.php';
                 </script>";
+                exit();
             } else {
                 echo "<script>
                     alertModal('error', 'Usuário e/ou senha incorreto(s). Tente Novamente.');
                     document.currentScript.remove();
                 </script>";
+                exit();
             }
         }
-        exit();
     ?>
     <div class="login center-self">
         <img src="img/logo.png" alt="">

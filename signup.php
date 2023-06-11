@@ -45,14 +45,15 @@
                     echo "<script>
                         window.location.href = 'index.php';
                     </script>";
+                    exit();
                 } else {
                     echo "<script>
                         alertModal('error', 'Não foi possível cadastrar. Tente Novamente.');
                         document.currentScript.remove();
                     </script>";
+                    exit();
                 }
             }
-            exit();
         }
     ?>
     <div class="login center-self">
