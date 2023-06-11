@@ -1,9 +1,9 @@
 <?php
-    $HOST = "localhost:3306";
-    $USER = "root";
-    $PASSWORD = "";
-    $DB_NAME = "dbStudary";
+    $DB_HOST = getenv('MYSQLHOST');
+    $DB_USER = getenv('MYSQLUSER');
+    $DB_PASS = getenv('MYSQLPASSWORD');
+    $DB_NAME = getenv('MYSQLDATABASE');
 
     mysqli_report(MYSQLI_REPORT_ERROR  | MYSQLI_REPORT_STRICT);
-    $db = new mysqli($HOST, $USER, $PASSWORD, $DB_NAME);
+    $db = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 ?>
