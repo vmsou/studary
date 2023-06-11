@@ -15,6 +15,7 @@
 </head>
 <body>
     <?php
+        ob_start();
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
             $username = stripslashes($_POST["username"]);
             $username = mysqli_real_escape_string($db, $username);
@@ -37,6 +38,7 @@
                 </script>";
             }
         }
+        ob_end_flush();
     ?>
     <div class="login center-self">
         <img src="img/logo.png" alt="">

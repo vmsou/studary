@@ -42,7 +42,7 @@
                     $_SESSION["username"] = $row["username"];
                     echo "<script>alertModal('success', 'Conta cadastrada.')</script>";
                     sleep(3);
-                    header("Location: index.php");
+                    exit(header("Location: index.php"));
                 } else {
                     echo "<script>
                         alertModal('error', 'Não foi possível cadastrar. Tente Novamente.');
