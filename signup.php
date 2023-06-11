@@ -11,6 +11,7 @@
 <body>
 
 <?php
+    session_start();
     include "php/db-connection.php";
 
     if (isset($_REQUEST["username"]) && $_SERVER["REQUEST_METHOD"] == "POST") {

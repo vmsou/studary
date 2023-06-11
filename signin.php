@@ -10,8 +10,8 @@
 </head>
 <body>
 <?php
-    include "php/db-connection.php";
     session_start();
+    include "php/db-connection.php";
     
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"])) {
         $username = stripslashes($_POST["username"]);
