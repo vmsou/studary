@@ -39,13 +39,15 @@
     
                 if ($insert_result) {
                     $row = mysqli_fetch_array($user_result);
-                    $_SESSION["username"] = $row["username"];
-                    echo "<script>alertModal('success', 'Conta cadastrada.')</script>";
-                    sleep(3);
                     echo "<script>
-                        window.location.href = 'index.php';
+                        alertModal('success', 'Conta cadastrada.');
+
+                        setTimeout(() => {
+                            window.location.href = 'index.php';
+                        }, 1000);
+                        
                     </script>";
-                    exit();
+
                 } else {
                     echo "<script>
                         alertModal('error', 'Não foi possível cadastrar. Tente Novamente.');
