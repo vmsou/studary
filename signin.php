@@ -27,7 +27,6 @@
             $result = $db->query($stmt) or die(mysql_error());
             $count = mysqli_num_rows($result);
             if ($count == 1) {
-                session_regenerate_id();
                 $row = mysqli_fetch_array($result);
                 $_SESSION["username"] = $row["username"];
                 header("Location: index.php");
