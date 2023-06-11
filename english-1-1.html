@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studary - Inglês</title>
+  <style>
+    .header {
+      background-color: #fff; 
+      color: #000; 
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .context-menu {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .context-menu-button {
+      margin-right: 10px;
+      color: #000; 
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .main-content {
+      display: flex;  
+    }
+
+    .left-section {
+      flex-basis: 33.33%; 
+      padding: 20px;
+      border-right: 1px solid rgb(211, 211, 211);
+    }
+
+    .right-section {
+      flex-basis: 66.66%; 
+      padding: 20px;
+    }
+
+    .left-section button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: large;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+    }
+
+    .left-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .left-section li:first-child button {
+      color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="./studary-master/img/logo.png" alt="Logo" class="logo">
+    <div class="context-menu">
+      <button class="context-menu-button">Prova</button>
+      <button class="context-menu-button">Disciplinas</button>
+      <button class="context-menu-button">Home</button>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-item">Profile</button>
+      <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Logoff</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="left-section">
+      <ul>
+        <li><button>Inglês Básico 1</button></li>
+        <li><button>Inglês Básico 2</button></li>
+        <li><button>Inglês Básico 3</button></li>
+        <li><button>Inglês Intermediário 1</button></li>
+        <li><button>Inglês Intermediário 2</button></li>
+        <li><button>Inglês Avançado</button></li>
+      </ul>
+    </div>
+    <div class="right-section">
+      <h2>Verbo "To Be"</h2>
+      <p>
+        O verbo "to be" é um dos verbos mais importantes em inglês. Ele é usado para indicar o estado,
+        identidade, localização ou características de algo ou alguém. Em português, pode ser traduzido
+        como "ser" ou "estar", dependendo do contexto.
+        <br><br>
+        Exemplo de uso:
+        <br>
+        - I am a student. (Eu sou um estudante.)
+        <br>
+        - The book is on the table. (O livro está na mesa.)
+      </p>
+    </div>
+  </div>
+</body>
+</html>
