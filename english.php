@@ -10,25 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studary | Inglês</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="header">
-    <img src="img/logo.png" alt="Logo" class="logo">
-    <div class="context-menu">
-      <button class="context-menu-button">Prova</button>
-      <button class="context-menu-button">Disciplinas</button>
-      <button class="context-menu-button">Home</button>
-    </div>
-    <div class="dropdown">
-      <button class="dropdown-item"><?php echo $_SESSION['username']; ?></button>
-      <div class="dropdown-content">
-        <a href="#">Profile</a>
-        <a href="logout.php">Logoff</a>
-      </div>
-    </div>
-  </header>
+  <?php include "php/html-header.php"; ?>
 
   <div class="main-content">
     <div class="left-section">
