@@ -82,7 +82,7 @@ async function main() {
         let p1 = document.createElement("p");
         p1.innerText = `Você obteve uma pontuação de: ${score}/${nQuestions}`;
         let p2 = document.createElement("p");
-        p2.innerText += "Para receber um feedback aprimorado se inscreva-se no nosso plano"
+        p2.innerText += "Para receber um feedback aprimorado inscreva-se no nosso plano"
         popupDiv.appendChild(p1);
         popupDiv.appendChild(p2);
 
