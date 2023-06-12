@@ -26,7 +26,6 @@
             exit();
         }
     ?>
-
     <div class="exam">
         <h1>Simulado <span id="question-count">?</span></h1>
         <div class="quiz">

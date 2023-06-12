@@ -19,9 +19,6 @@ const questions = [
     },
 ];
 
-function feedbackModal() {
-    
-}
 
 
 function main() {
@@ -77,6 +74,41 @@ function main() {
         return answerButton;
     }
 
+    function feedbackModal() {
+        let score = getScore();
+
+        let popupDiv = document.createElement("div");
+        popupDiv.classList.add("popup");
+
+        let img = document.createElement("img");
+        img.src = "img/logo.png";
+        popupDiv.appendChild(img);
+        
+        let h2 = document.createElement("h2");
+        h2.innerText = "Feedback";
+        popupDiv.appendChild(h2);
+    
+        let p1 = document.createElement("p");
+        p1.innerText = `Você obteve uma pontuação de: ${score}/${nQuestions}`;
+        let p2 = document.createElement("p");
+        p2.innerText += "Para receber um feedback aprimorado se inscreva-se no nosso plano"
+        popupDiv.appendChild(p1);
+        popupDiv.appendChild(p2);
+
+        let okButton = document.createElement("button");
+        okButton.innerText = "OK";
+        okButton.onclick = () => { popupDiv.remove(); }
+        popupDiv.appendChild(okButton);
+
+        let premiumButton = document.createElement("button");
+        premiumButton.classList.add("premium");
+        premiumButton.innerText = "Premium";
+        premiumButton.onclick = () => { document.window.href = "premium.php"; }
+        popupDiv.appendChild(premiumButton);
+
+        document.body.appendChild(popupDiv);
+    }
+
     function updateQuestion(data) {
         questionHeader.innerText = data.question;
         questionCount.innerText = `${Object.keys(userAnswers).length}/${nQuestions}`
@@ -115,7 +147,6 @@ function main() {
     }
 
     endQuiz.onclick = () => {
-        let score = getScore();
         showAnswer();
 
         nextButton.onclick = () => {
@@ -131,7 +162,8 @@ function main() {
             showAnswer();
         }
         
-        endQuiz.innerText = "Feedback Personalizado"
+        endQuiz.innerText = "Feedback"
+        endQuiz.onclick = feedbackModal;
     }
     
     
