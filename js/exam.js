@@ -28,7 +28,6 @@ function main() {
     const backButton = document.getElementById("back-btn");
     const questionNumber = document.getElementById("question-number");
     const nextButton = document.getElementById("next-btn");
-    const quizResult = document.getElementById("quiz-result");
     const endQuiz = document.getElementById("end-quiz");
 
     let qIdx = 0;
@@ -103,7 +102,7 @@ function main() {
         let premiumButton = document.createElement("button");
         premiumButton.classList.add("premium");
         premiumButton.innerText = "Premium";
-        premiumButton.onclick = () => { document.window.href = "premium.php"; }
+        premiumButton.onclick = () => { window.location.href = "premium.php"; }
         popupDiv.appendChild(premiumButton);
 
         document.body.appendChild(popupDiv);
@@ -148,6 +147,7 @@ function main() {
 
     endQuiz.onclick = () => {
         showAnswer();
+        feedbackModal();
 
         nextButton.onclick = () => {
             qIdx = (qIdx + 1) % nQuestions;

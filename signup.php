@@ -11,6 +11,7 @@
     <title>Studary | Criar Conta</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/main.js"></script>
 </head>
 <body>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*
+==============
+All
+==============
+*/
+:root {
+    --primary-color: #2f8dfb;
+    --primary-color-light: #99c0f5;
+    --primary-color-dark: #1e5ea7;
+    --secondary-color: #f1f1f5;
+    --radius: 1.25rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+.center {
+    text-align: center;
+    margin: 20px;
+}
+
+
+/*
+==============
+Cards
+==============
+*/
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 455px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box h3 {
+    font-size: 35px;
+    padding: 20px 0;
+}
+
+.box p {
+    font-size: 15px;
+}
+
+.box button {
+    width: 140px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    outline: none;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 100px;
+    transition: all 0.3s;
+}
+
+.box button:hover {
+    background-color: var(--primary-color-dark);
+}

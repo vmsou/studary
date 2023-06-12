@@ -11,6 +11,7 @@
     <title>Studary | Dashboard</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <?php include "php/html-header.php"; ?>

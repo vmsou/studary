@@ -37,7 +37,7 @@
                 <span id="question-number">1</span>
                 <button id="next-btn">›</button>
             </div>
-            <div class="container" id="quiz-result">
+            <div class="quiz-result">
                 <button id="end-quiz">Finalizar</button>
             </div>
         </div>

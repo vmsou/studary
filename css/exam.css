@@ -110,7 +110,7 @@
     font-size: 20px;
 }
 
-.container {
+.quiz-result {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +145,7 @@
     padding: 0 30px 30px;
     color: black;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
 }
 
 .popup img {
