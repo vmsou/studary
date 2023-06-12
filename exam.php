@@ -16,16 +16,7 @@
 </head>
 <body>
     <?php include "php/html-header.php"; ?>
-    <?php
-        if (isset($_GET["course"])) {
-            $course = htmlspecialchars($_GET["course"]);
-        } else {
-            echo "<script>
-                    window.location.href = 'index.php';
-                </script>";
-            exit();
-        }
-    ?>
+    
     <div class="exam">
         <h1>Simulado <span id="question-count">?</span></h1>
         <div class="quiz">

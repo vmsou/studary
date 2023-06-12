@@ -1,27 +1,19 @@
-const questions = [
-    {
-        question: "Qual o significado do pronome 'We'?",
-        answers: [
-            { text: "Eles", result: false },
-            { text: "Ela", result: false },
-            { text: "Nós", result: true },
-            { text: "Eu", result: false },
-        ]
-    },
-    {
-        question: "Considerando a frase: 'I ... a teacher'. Qual palavra completa esta frase?",
-        answers: [
-            { text: "am", result: true },
-            { text: "an", result: false },
-            { text: "are", result: false },
-            { text: "is", result: false },
-        ]
-    },
-];
+async function fetchQuestions() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
+    const response = await fetch(`php/fetch-questions.php?course=${course}`, {
+        method: "GET"
+    });
+    let data = await response.json();
+    return data;
+}
 
-
-
-function main() {
+async function main() {
+    let questions = await fetchQuestions();
+    questions.sort(() => Math.random() - 0.5)
+    questions.forEach(question => question["answers"].sort(() => Math.random() - 0.5))
+    questions = questions.slice(0, 30);
+    
     const questionHeader = document.getElementById("question");
     const questionCount = document.getElementById("question-count");
     const answerButtons = document.getElementById("answer-btns");
@@ -44,7 +36,7 @@ function main() {
 
     for (let i = 0; i < nQuestions; ++i) {
         for (let answer of questions[i].answers) {
-            if (answer.result) correctAnswer[i] = answer.text;
+            if (answer.result === '1') correctAnswer[i] = answer.text;
         }
     }
 

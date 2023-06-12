@@ -25,10 +25,9 @@
             $hash = md5($password);
 
             $stmt = "SELECT * FROM tbUser WHERE username = '$username' AND password = '$hash'";
-            $result = $db->query($stmt) or die(mysql_error());
-            $count = mysqli_num_rows($result);
-            if ($count == 1) {
-                $row = mysqli_fetch_array($result);
+            $select_result = $db->query($stmt) or die(mysql_error());
+            if ($select_result->num_rows) {
+                $row = $select_result->fetch_assoc();
                 $_SESSION["username"] = $row["username"];
                 echo "<script>
                     window.location.href = 'index.php';

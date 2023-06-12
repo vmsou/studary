@@ -14,8 +14,7 @@
         $stmt = "SELECT course FROM tbCourse WHERE course = '$course'";
         $select_result = $db->query($stmt);
 
-        $count = mysqli_num_rows($select_result);
-        if ($count == 0) {
+        if ($select_result->num_rows == 0) {
             $stmt = "INSERT INTO tbCourse (course) VALUES ('$course')";
             $insert_result = $db->query($stmt);
         }
@@ -26,17 +25,15 @@
         $stmt = "SELECT id_question FROM tbQuestion WHERE question = '$question'";
         $select_result = $db->query($stmt);
 
-        $count = mysqli_num_rows($select_result);
-        if ($count == 0) {
+        if ($select_result->num_rows == 0) {
             $stmt = "INSERT INTO tbQuestion (course, question) VALUES ('$course', '$question')";
             $insert_result = $db->query($stmt);
         }
 
         $stmt = "SELECT id_question FROM tbQuestion WHERE question = '$question'";
         $select_result = $db->query($stmt);
-        $row = mysqli_fetch_array($select_result);
 
-        $id_question = $row["id_question"];
+        $id_question = $select_result->fetch_assoc()["id_question"];
 
         $correctAnswer = stripslashes($_POST["correctAnswer"]);
         $correctAnswer = mysqli_real_escape_string($db, $correctAnswer);

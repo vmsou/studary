@@ -26,9 +26,8 @@
             
             // Check if user already exists
             $stmt = "SELECT * FROM tbUser WHERE username = '$username'";
-            $user_result = $db->query($stmt) or die(mysql_error());
-            $count = mysqli_num_rows($user_result);
-            if ($count == 1) {
+            $select_result = $db->query($stmt) or die(mysql_error());
+            if ($select_result->num_rows == 1) {
                 echo "<script>
                     alertModal('error', 'Usuário Existente. Tente outro nome de usuário.');
                     document.currentScript.remove();
@@ -39,7 +38,7 @@
                 $insert_result = $db->query($stmt);
     
                 if ($insert_result) {
-                    $row = mysqli_fetch_array($user_result);
+                    $row = $select_result->fetch_assoc();
                     echo "<script>
                         alertModal('success', 'Conta cadastrada.');
 
