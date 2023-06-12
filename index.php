@@ -14,5 +14,24 @@
 </head>
 <body>
     <?php include "php/html-header.php"; ?>
+
+    <h1 class="center">Disciplinas</h1>
+    <div class="container">
+        <div class="box">
+            <h3>Inglês</h3>
+            <p>Exercicios e Simulados destinado a matéria de Inglês</p>
+            <a href="english.php"><button>Entrar</button></a>
+        </div>
+        <div class="box">
+            <h3>Português</h3>
+            <p>Exercicios e Simulados destinado a matéria de Português</p>
+            <a href="english.php"><button>Entrar</button></a>
+        </div>
+        <div class="box">
+            <h3>Geografia</h3>
+            <p>Exercicios e Simulados destinado a matéria de Geografia</p>
+            <a href="english.php"><button>Entrar</button></a>
+        </div>
+    </div>
 </body>
 </html>

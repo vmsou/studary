@@ -3,10 +3,10 @@
   echo "<header class='header'>
   <img src='img/logo.png' alt='Logo' class='logo'>
   <div class='context-menu'>
-    <button class='context-menu-button'>Disciplinas</button>
-    <button class='context-menu-button'>Provas</button>
-    <button class='context-menu-button'>Exercicios</button>
-    <button class='context-menu-button'>Sobre</button>
+    <a href='index.php'>Disciplinas</button>
+    <a href=''>Provas</button>
+    <a href=''>Exercicios</button>
+    <a href=''>Sobre</button>
   </div>
   <div class='dropdown'>
     <button class='dropdown-item'> $username </button>
