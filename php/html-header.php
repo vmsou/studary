@@ -5,7 +5,7 @@
   <div class='context-menu'>
     <a href='index.php'>Disciplinas</button>
     <a href=''>Provas</button>
-    <a href=''>Exercicios</button>
+    <a href=''>Recompensas</button>
     <a href=''>Sobre</button>
   </div>
   <div class='dropdown'>
