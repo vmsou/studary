@@ -124,13 +124,13 @@ function main() {
     function showAnswer() {
         for (let btn of answerButtons.children) {
             btn.onclick = undefined;
+     
             if (btn.innerText === correctAnswer[qIdx]) {
                 btn.classList.add("correct");
-            }
-            if (btn.classList.contains("active")) {
-                btn.classList.remove("active");
+            } else if (btn.classList.contains("active")) {
                 btn.classList.add("incorrect");
             }
+            
         }
     }
 
