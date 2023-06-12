@@ -11,8 +11,8 @@
   <div class='dropdown'>
     <button class='dropdown-item'> $username </button>
     <div class='dropdown-content'>
-      <a href='#'>Profile</a>
-      <a href='logout.php'>Logoff</a>
+      <a href='#'><span>Profile</span></a>
+      <a href='logout.php'><span>Logout</span></a>
     </div>
   </div>
   </header>";
