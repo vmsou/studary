@@ -2,6 +2,6 @@
     session_start();
     
     if(!isset($_SESSION["username"])) {
-        exit(header("Location: login"));
+        exit(header("Location: signin.php"));
     }
 ?>

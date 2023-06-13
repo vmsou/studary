@@ -2,7 +2,7 @@
     include "php/session.php";
     
     if(isset($_SESSION["username"]) && $_SESSION["username"] != "admin") {
-        exit(header("Location: index"));
+        exit(header("Location: index.php"));
     }
 
     include "php/db-connection.php";
@@ -50,7 +50,7 @@
             alertModal('success', 'Pergunta registrada.');
 
             setTimeout(() => {
-                window.location.href = 'admin';
+                window.location.href = 'admin.php';
             }, 1000);    
         </script>";
     }

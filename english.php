@@ -17,7 +17,7 @@
 
   <div class="main-content">
     <div class="left-section">
-      <h2>Inglês <a href="exam?course=english"><button>Prova</button></a></h2>
+      <h2>Inglês <a href="exam.php?course=english"><button>Prova</button></a></h2>
       <ul>
         <li class="active"><a>Inglês Básico 1</a></li>
         <li><a>Inglês Básico 2</a></li>

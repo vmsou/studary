@@ -43,7 +43,7 @@
                         alertModal('success', 'Conta cadastrada.');
 
                         setTimeout(() => {
-                            window.location.href = 'index';
+                            window.location.href = 'index.php';
                         }, 1000);
                         
                     </script>";
@@ -63,7 +63,7 @@
             <input type="text" name="username" placeholder="Nome de usuário">
             <input type="password" name="password" placeholder="Senha">
             <input type="submit" value="Cadastrar">
-            <a href="login">Já possui uma conta?</a>
+            <a href="signin.php">Já possui uma conta?</a>
         </form>
     </div>
 </body>
