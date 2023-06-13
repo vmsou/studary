@@ -30,7 +30,7 @@ async function main() {
     if (nQuestions === 0) {
         alertModal("error", "Não foi possivel carregar simulado.");
         setTimeout(() => {
-            window.location.href = "index.php";
+            window.location.href = "index";
         }, 1000);
     }
 
@@ -94,7 +94,7 @@ async function main() {
         let premiumButton = document.createElement("button");
         premiumButton.classList.add("premium");
         premiumButton.innerText = "Premium";
-        premiumButton.onclick = () => { window.location.href = "premium.php"; }
+        premiumButton.onclick = () => { window.location.href = "premium"; }
         popupDiv.appendChild(premiumButton);
 
         document.body.appendChild(popupDiv);

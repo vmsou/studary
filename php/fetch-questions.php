@@ -6,7 +6,7 @@
         $stmt = "SELECT course FROM tbCourse WHERE course = '$course'";
         $select_course = $db->query($stmt);
         if ($select_course->num_rows == 0) {
-            echo "<script> window.location.href = 'index.php'; </script>";
+            echo "<script> window.location.href = 'index'; </script>";
             exit();
         }
         

@@ -48,7 +48,7 @@
             <input type="password" name="password" placeholder="Senha">
             <input type="submit" value="Entrar" name="submit">
             <a href="#">Esqueceu a senha?</a>
-            <a href="signup.php">Criar conta</a>
+            <a href="signup">Criar conta</a>
         </form>
     </div>
 </body>

@@ -3,7 +3,7 @@
   echo "<header class='header'>
   <img src='img/logo.png' alt='Logo' class='logo'>
   <div class='context-menu'>
-    <a href='index.php'>Disciplinas</button>
+    <a href='index'>Disciplinas</button>
     <a href=''>Provas</button>
     <a href=''>Recompensas</button>
     <a href=''>Sobre</button>
@@ -12,7 +12,7 @@
     <button class='dropdown-item'> $username </button>
     <div class='dropdown-content'>
       <a href='#'><span>Profile</span></a>
-      <a href='logout.php'><span>Logout</span></a>
+      <a href='logout'><span>Logout</span></a>
     </div>
   </div>
   </header>";
