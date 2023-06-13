@@ -1,11 +1,8 @@
 async function fetchQuestions() {
     const urlParams = new URLSearchParams(window.location.search);
     const course = urlParams.get("course");
-    const response = await fetch(`php/fetch-questions.php?course=${course}`, {
-        method: "GET"
-    });
-    let data = await response.json();
-    return data;
+    const response = await fetch(`php/fetch-questions.php?course=${course}`, { method: "GET"});
+    return response.json();
 }
 
 async function main() {

@@ -63,7 +63,7 @@
             <input type="text" name="username" placeholder="Nome de usuário">
             <input type="password" name="password" placeholder="Senha">
             <input type="submit" value="Cadastrar">
-            <a href="signin.php">Já possui uma conta?</a>
+            <a href="login.php">Já possui uma conta?</a>
         </form>
     </div>
 </body>
